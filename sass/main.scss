@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+//have to include all of these otherwise main.css will be empty
+//We do not create styles in here
+
+@use 'abstracts';
+@use 'base';
+@use 'components';
+@use 'pages';
+
+header {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+}
+
+$primaryBTN : #146C94 

@@ -1,0 +1,26 @@
+@media screen and (min-width: 768px) {
+    #main-logo {
+        order: -1;
+    }
+
+    .hero-con {
+        order: -1;
+    }
+}
+
+
+
+
+
+#main-logo {
+    order: -1;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+#cta-button {
+    visibility: hidden;
+}
+}

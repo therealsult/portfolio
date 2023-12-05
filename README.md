@@ -1,34 +1,31 @@
-# Abdullah Sultan Portfolio
+# AJAX Application - Section 2 - MMED-3039
 
-## Table of Contents
+This project utilizes AJAX to dynamically fetch content from an API, featuring a loading spinner and error-handling mechanisms.
 
-- [Overview](#overview)
-- [Built With](#built-with)
-- [Features](#features)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+## Installation
 
-## Overview
+TODO: Describe the installation process
 
-<!-- TODO: Add a screenshot of the live project.
-    1. Link to a 'live demo.'
-    2. Describe your overall experience in a couple of sentences.
-    3. List a few specific technical things that you learned or improved on.
-    4. Share any other tips or guidance for others attempting this or something similar.
- -->
+## Usage
 
-### Built With
+TODO: Write usage instructions
 
-<!-- TODO: List any MAJOR libraries/frameworks (e.g. React, Tailwind) with links to their homepages. -->
+## Contributing
 
-## Features
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
 
-<!-- TODO: List what specific 'user problems' that this application solves. -->
+## History
 
-## Contact
+TODO: Write history
 
-<!-- TODO: Include icons and links to your RELEVANT, PROFESSIONAL 'DEV-ORIENTED' social media. LinkedIn and dev.to are minimum. -->
+## Credits
 
-## Acknowledgements
+Rodrigo Rocha de Freitas
 
-<!-- TODO: List any blog posts, tutorials or plugins that you may have used to complete the project. Only list those that had a significant impact. Obviously, we all 'Google' stuff while working on our things, but maybe something in particular stood out as a 'major contributor' to your skill set for this project. -->
+## License
+
+MIT

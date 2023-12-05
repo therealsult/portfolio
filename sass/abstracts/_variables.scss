@@ -1,2 +1,13 @@
 @use 'fonts';
 
+// Define Colours
+$black:      #101112;
+$blue:       #5d63a4;
+$red:        #ff7396;
+$white:      #f3f6f6;
+$green:      #3fdaaf;
+$grey:       #666666;
+$lexend:    'lexend', sans-serif;
+
+$transition-bezier: 1.000, 0.000, 0.000, 1.000;
+$transition-len: 0.2s;

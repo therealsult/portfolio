@@ -505,8 +505,8 @@ button.fs-continue,
 	position: absolute;
 	top: 0;
 	width: 0%;
-	height: 0.5em;
-	background: #fffed8;
+	height: 0.8em;
+	background: #2a2a2a;
 	-webkit-transition: width 0.3s ease-in-out;
 	transition: width 0.3s ease-in-out;
 }

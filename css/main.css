@@ -1,6 +1,7 @@
-html, body, .container-3 {
+html, body {
 	height:100%;
 	width: 100vw;
+  max-width: 1200;
 }
 
 body {
@@ -48,7 +49,9 @@ body {
  }
 
  .container-3 {
-  max-width: 100vw;
+	height:100%;
+	width: 100vw;
+  max-width: 1200;
   margin: 0 auto;
  }
 
@@ -155,11 +158,12 @@ header img {
 
 
 
+
+
+
+
+
 /* ==== projects sec ==== */
-
-
-
-
 
 
 /* Create three equal columns that floats next to each other */
@@ -182,13 +186,14 @@ header img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 0 0 6rem 0;
 }
 
 .project-gallery .project {
   position: relative;
   float: left;
   overflow: hidden;
-  width: 30%;
+  width: 29%;
   margin: 20px;
   background: #000;
   cursor: pointer;
@@ -200,7 +205,7 @@ header img {
 .project-gallery .project img {
   position: relative;
   display: block;
-  opacity: .8;
+  opacity: .7;
   width: 110%;
   max-height: auto;  
   transition: opacity 0.35s, transform 0.35s;
@@ -242,15 +247,14 @@ header img {
 .project-gallery .project p {
   letter-spacing: 1px;
   font-size: 68%;
-
-  padding: 1em 0;
+  padding: 3em 0;
   opacity: 0;
   transition: opacity 0.35s, transform 0.35s;
   transform: translate3d(10%, 0, 0);
 }
 
 .project-gallery .project:hover img {
-  opacity: .3;
+  opacity: .15;
   transform: translate3d(0, 0, 0);
 
 }
@@ -289,6 +293,14 @@ header img {
     width: 100%;
   }
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -332,12 +344,13 @@ div{
 .highlight-box h2 {
   font-size: 38px;
   font-weight: 500;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .highlight-box p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
+  font-weight: 300;
 }
 
 
@@ -391,25 +404,20 @@ div{
   padding: 0 0 6rem 0;
 }
 
-.test-box {
-  float: left;
-  width: 29%;
-  border: #000 solid 5px;
-  margin: 20px;
-}
+ 
 
 
 .reviews, .projects {
   display: flex;
   justify-content: space-between;
-  max-width: 960px;
+  max-width: 1200px;
   margin: auto;
   padding-top: -100px;
 }
 .testimonial {
   flex: 1;
   background-color: #000000;
-  margin: 15px 8px;
+  margin: 20px;
   padding: 30px;
   color: #fff;
   text-align: left;
@@ -476,8 +484,9 @@ div{
 
 /* ==== footer ==== */
 
-.footer {}
-
+.map {
+  background-color: #000;
+}
 .column__footer {
   float: left;
   padding: 10px;
@@ -803,27 +812,25 @@ div{
 #btn-box {
   display: grid;
   grid-template-columns: 1fr;
-  max-width: 300px;
+  max-width: 180px;
   margin: 0 auto;
+  font-family: 'lexend';
 
 }
 
 .btn {
-  background-color: black;
-  color: #ffffff;
-  cursor: pointer;
-  margin: 20px;
-  padding: 15px;
-  font-size: 14px;
-  font-family: 'lexend';
-  transition: all 1s ease-out;
-  margin: -55px 15px 50px 12px
-
+	padding: 0.6em 1.5em;
+	border: 3px solid #232529;
+	border-radius: 40px;
+	font-weight: 700;
+	color: rgba(0,0,0,0.4);
+  font-size: 1.25em;
 }
+
+
 .btn:hover, .btn:focus {
-  color: rgb(213, 255, 184);
-  filter: drop-shadow(0px 0px 6px #00000092);
-  transition: all ease .6s;
+	background: #232529;
+	color: #fff;
 }
 
 

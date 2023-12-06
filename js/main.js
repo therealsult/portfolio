@@ -93,11 +93,6 @@ function initMap() {
   
 
 
-//  ===== projects js =====
-
-
-
-
 
 
 
@@ -134,15 +129,25 @@ function initMap() {
 })();
 
 
-$(document).ready(function() {
-  $('.project-gallery').magnificPopup({
-  delegate: 'a', 
-  type: 'iframe',
-  gallery:{
-    enabled:true
-  }
-});
-});
+
+
+
+//  ===== projects js =====
+
+
+
+
+
+
+// $(document).ready(function() {
+//   $('.project-gallery').magnificPopup({
+//   delegate: 'a', 
+//   type: 'iframe',
+//   gallery:{
+//     enabled:true
+//   }
+// });
+// });
 
   // ==== footer bottom ==== 
 

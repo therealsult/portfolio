@@ -1,3 +1,79 @@
+// ====== gsap text ======
+
+//----hero----
+const heroH2 = new SplitType('#hero-h2')
+
+gsap.to('.char', {
+  y: 0,
+  stagger: 0.05,
+  delay: 0.2,
+  duration: 0.1,
+})
+
+
+//----about----
+const words = ["Abdullah.", "A Designer.", "A Developer.", "A Creator."]
+
+let cursor = gsap.to('.cursor', {
+  delay:.2, 
+  opacity:0, 
+  ease: "power2.inOut", 
+  repeat:-1})
+
+let masterTl = gsap.timeline({
+  repeat: -1
+})
+  .pause()
+
+let boxTl = gsap.timeline() 
+
+boxTl.from('.hi', {
+  duration:1, 
+  y:"7vw", 
+  ease: "power3.out"
+})
+  
+  .to('.text-c', {
+    duration:0, 
+    onComplete: () => masterTl.play() 
+  })
+
+  words.forEach(word => {
+  let tl = gsap.timeline({
+    repeat: 1, 
+    yoyo: true, 
+    repeatDelay:1
+  })
+
+  tl.to('.text', {
+    duration: 1, 
+    text: word
+  })
+
+  masterTl.add(tl)
+
+})
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+var { chars } = new SplitText("h1", { type: "chars" });
+
+gsap.to(chars, {
+  color: "#fff",
+  stagger: {
+    each: 0.1
+  },
+  scrollTrigger: {
+    trigger: "#banner-1",
+    scrub: true,
+    pin: true
+  }
+});
+
+
 
 
 
@@ -102,52 +178,6 @@ function initMap() {
 
 
 
-
-
-
-
-// ==== contact form =====
-
-
-(function() {
-    var formWrap = document.getElementById( 'fs-form-wrap' );
-
-    [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
-        new SelectFx( el, {
-            stickyPlaceholder: false,
-            onChange: function(val){
-                document.querySelector('span.cs-placeholder').style.backgroundColor = val;
-            }
-        });
-    } );
-
-    new FForm( formWrap, {
-        onReview : function() {
-            classie.add( document.body, 'overview' ); 
-        }
-    } );
-})();
-
-
-
-
-
-//  ===== projects js =====
-
-
-
-
-
-
-// $(document).ready(function() {
-//   $('.project-gallery').magnificPopup({
-//   delegate: 'a', 
-//   type: 'iframe',
-//   gallery:{
-//     enabled:true
-//   }
-// });
-// });
 
   // ==== footer bottom ==== 
 

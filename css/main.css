@@ -10,25 +10,45 @@ body {
   margin: 0;
   padding: 0;
   color: #ffffff;
-  animation: bg-img 16s ease-in-out infinite;
+  animation: bg-img 80s ease-in-out infinite;
+  transition: all ease-out 2s;
   background-size: cover;
+  
 }
 
-@-webkit-keyframes bg-img{
+@keyframes bg-img{
   0%,100%{
-    background-image: url(../images/1337139.png);
+    background-image: url(../images/chess.png);
   }
-  25%{
-    background-image: url(../images/dark-background-b59iy2towqy5yrgb.jpg);
+  16%{
+    background-image: url(../images/plane.png);
   }
-  50%{
-    background-image: url(../images/dd.jpg);
+  32%{
+    background-image: url(../images/engine.png);
   }
-  75%{
-    background-image: url(../images/cc.jpg);
+  48%{
+    background-image: url(../images/building.png);
+  }
+  64%{
+    background-image: url(../images/vw.png);
+  }
+  80%{
+    background-image: url(../images/river.png);
   }
 }
 
+
+.char {
+  transform: translateY(115px);
+  transition: transform .5s;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+}
+
+.word {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+}
 
 
 
@@ -124,11 +144,17 @@ header img {
   height:90vh;
   padding-top: 6em;
   }
+  
 
 #hero h2 {
+  position: relative;
   font-weight: 400;
   font-size: 56px;
+  overflow: hidden;
  }
+ 
+
+
 
 #hero h3 {
   font-weight: 300;
@@ -136,6 +162,8 @@ header img {
 }
 
 
+
+/* ====== banner ===== */
 #banner-1 {
   color: #000000;
   display: grid;
@@ -164,19 +192,6 @@ header img {
 
 
 /* ==== projects sec ==== */
-
-
-/* Create three equal columns that floats next to each other */
-/* .column {
-  float: left;
-  width: 32%;
-  margin-bottom: 8rem;
-  filter: drop-shadow(0px 0px 6px #00000067);
-}
-
-* {
-  box-sizing: border-box;
-} */
 
 .project-gallery {
   position: relative;
@@ -214,18 +229,14 @@ header img {
           backface-visibility: hidden;
 }
 
-.project-gallery .project .project-caption {
-  padding: 2em;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.25em;
-}
-
-.project-gallery .project .project-caption,
 .project-gallery .project .project-caption > a {
   position: absolute;
   top: 0;
   left: 0;
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
   width: 100%;
   height: 100%;
 }
@@ -234,6 +245,7 @@ header img {
   font-weight: 300;
   overflow: hidden;
   padding: 0.5em 0;
+  font-size: 28px;
 }
 
 
@@ -316,7 +328,6 @@ header img {
 
 div{
   font-family: 'lexend',serif;
-  font-size:14px;
 }
 
 .highlight-sec{
@@ -482,17 +493,106 @@ div{
 
 
 
+
+
+
+/* ================================== */
+
+/* #step-1:hover:after {
+  content: 'HELLO!';
+  position: absolute;
+  left: 0;
+  top: 1em;
+  color: #323232;
+  background: #aaa;
+  border-radius: 3px;
+  width: 100%;
+  text-align: center;
+  padding: 3px 4px;
+  transition: all ease-out 1s;
+
+}
+
+#step-1 {
+   
+  position: relative;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #323232;
+  
+
+} */
+
+
+.study-step:hover > .pop {
+  opacity: 1;
+  width: 850px;
+  height: 200px;
+  transform: translate3d(20px, 0, 0);
+
+}
+
+.study-step-2:hover > .pop {
+  opacity: 1;
+  width: 850px;
+  height: 200px;
+  transform: translate3d(-20px, 0, 0);
+
+}
+
+.pop {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  background: #080808;
+  z-index: -1;
+  margin: auto;
+  transition: all 0.6s ease;
+  filter: drop-shadow(0px 0px 4px #0000005e);
+
+  
+}
+.pop > p {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: 'lexend';
+  padding: 10px;
+}
+
+.pop > h2 {
+  margin-left: 10px;
+  color: #fff;
+  font-size: 220px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==== footer ==== */
 
 .map {
   background-color: #000;
 }
-.column__footer {
+.column-footer {
   float: left;
   padding: 10px;
 }
 
-.wrapper__footer {
+.wrapper-footer {
   color: #ffffff;
   background: #000;
   background-position: center;
@@ -600,7 +700,7 @@ div{
 
 
 
-.row__footer:after {
+.row-footer:after {
   content: "";
   display: table;
   clear: both;
@@ -624,7 +724,7 @@ div{
 
 
 @media screen and (max-width: 768px) {
-  .column__footer {
+  .column-footer {
     width: 100%;
   }
 
@@ -683,6 +783,9 @@ div{
   margin: 20px;
 }
 
+.case-study {
+  z-index: 1;
+}
 
 .case-study, .case-study-2 {
   display: flex;
@@ -712,7 +815,7 @@ div{
   margin-top: 0;
   padding: 20px 0 2px 0;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 }
 

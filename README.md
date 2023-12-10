@@ -1,6 +1,6 @@
-# AJAX Application - Section 2 - MMED-3039
+# Abdullah Sultan Portfolio
 
-This project utilizes AJAX to dynamically fetch content from an API, featuring a loading spinner and error-handling mechanisms.
+Welcome to my portfolio site
 
 ## Installation
 
@@ -24,7 +24,7 @@ TODO: Write history
 
 ## Credits
 
-Rodrigo Rocha de Freitas
+Abdullah Sultan
 
 ## License
 

@@ -19,11 +19,11 @@
 
 <header class="site-header">
 
-    <a href="index.html"><img src="images/logo-1.svg" alt="Abdullah Sultan"></a>
+    <a href="index.php"><img src="images/logo-1.svg" alt="Abdullah Sultan"></a>
         <nav class="site-navigation">
           <ul class="nav">
-            <li><a href="about.html">About</a></li> 
-            <li><a href="projects.html">Projects</a></li> 
+            <li><a href="about.php">About</a></li> 
+            <li><a href="projects.php">Projects</a></li> 
           </ul>
         </nav>
         
@@ -99,7 +99,7 @@
   </div>
 
     <div class="footer-bottom">
-      <p>Copyright &copy <span id="year"></span> <a href="index.html">Abdulla Sultan</a> </p>
+      <p>Copyright &copy <span id="year"></span> <a href="index.html">Abdullah Sultan</a> </p>
     </div>
 
 </footer>

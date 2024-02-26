@@ -13,6 +13,16 @@
    </head>
 
 
+<?php
+require_once('includes/connect.php');
+
+// Run queries to pull back content
+$query = 'SELECT id, title, project_description, published_date, project_image FROM projects';
+$stmt = $connection->prepare($query);
+$stmt->execute();
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <body>
 
 <!-- ==== header ==== -->
@@ -21,105 +31,42 @@
 
 <header class="site-header">
 
-  <a href="index.html"><img src="images/logo-1.svg" alt="Abdullah Sultan"></a>
+  <a href="index.php"><img src="images/logo-1.svg" alt="Abdullah Sultan"></a>
       <nav class="site-navigation">
         <ul class="nav">
-          <li><a href="about.html">About</a></li> 
-          <li><a href="projects.html">Projects</a></li> 
+          <li><a href="about.php">About</a></li> 
+          <li><a href="projects.php">Projects</a></li> 
         </ul>
       </nav>
       
 </header>
 
+<div class="bg-1">
       <section class="container" id="hero">
         
         <h1 class="hidden">Hero Section</h1>
         <h2 id="hero-h2">See More</h2>
       </section>
-
+       </div>
       <section class="container-2" id="banner-1">
         <h1 class="hidden">Banner 1</h1>
         <h2>Projects Gallery</h2>
        </section>
 
-<!-- 
-      <section class="container-2" id="proj-sec">
-        <h1 class="hidden">Projects Section</h1>
 
-        <div class="projects">
-          <div class="column">
-          <img src="images/earbuds.png" alt="Earbuds Website">
-          </div>
-          <div class="column">
-            <a href="project.html"><img src="images/quatro-1.png" alt="Quatro Rebrand"></a>
-          </div>
-          <div class="column">
-            <img src="images/case-1.png" alt="Earbuds Build">
-          </div>
-        </div>
-        
-      </section> -->
 
-      <section class="projects-con">
-        <section class="content">  
-          <div class="project-gallery">
-        
-            <div class="project">
-              <img src="images/case-1.png" />
-              <div class="project-caption">
-                <a href="study.html">
-                  <div>
-                    <h2>Earbud Product Development</h2>
-                    <p>3D product build using Cinema4D</p>
-                  </div>
-              </div>
-              </a>
-            </div>
-            
-            <div class="project">
-              <img src="images/quatro-1.png" alt="Olympic National Park" />
-              <div class="project-caption">
-                <a href="study.html">
-                  <div>
-                    <h2>Quatro Product Rebrand</h2>
-                    <p>Brand rebirth</p>
-                </div>
-              </div>
-              </a>
-            </div>
-        
-        
-        
-        
-            <div class="project">
-              <img src="images/earbuds.png" alt="Mount St. Helens" />
-              <div class="project-caption">
-                <a href="study.html">
-                  <div>
-                    <h2>Earbuds Web Development</h2>
-                    <p>Interactive web development</p>
-                  </div>
-                <!-- <a href=""></a> -->
-              </div>
-            </div>
-            
-            <!-- second row -->
-            <!-- <div class="project">
-              <img src="images/case-1.png" alt="Olympic National Park" />
-              <div class="project-caption">
-                <div>
-                  <h2>header </h2>
-                  <p>text...</p>
-                </div>
-                <a class="vimeo-popup" href="#"></a>
-              </div>
-            </div> -->
-        
-        
-        
-        
-          </div>
-        </section>
+
+       <section class="projects-con">
+    <?php
+    foreach ($results as $row) {
+        $encodedImageName = rawurlencode($row['project_image']);
+
+        echo '<div class="book_list"><img src="http://localhost/portfolio/images/' . $encodedImageName . '" alt="' . $row['title'] . '" style="width: auto; height: 260px;"><h2>' . $row['title'] . '</h2><p>' . '&nbsp;<a href="http://localhost/portfolio/study.php?id=' . $row['id'] . '">Learn More</a></p></div>';
+    }
+    ?>
+</section>
+ 
+
 
 <!-- ===== footer sec ===== -->
 
@@ -154,7 +101,7 @@
   </div>
 
     <div class="footer-bottom">
-      <p>Copyright &copy <span id="year"></span> <a href="index.html">Abdulla Sultan</a> </p>
+      <p>Copyright &copy <span id="year"></span> <a href="index.html">Abdullah Sultan</a> </p>
     </div>
 
 </footer>

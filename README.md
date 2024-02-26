@@ -13,11 +13,10 @@ Javascript, HTML, CSS, PHP, SQL, Adobe Suite, Blender and Cinema 4D.
 
 
 
-## Authors
-
-- [@therealsult](https://www.github.com/therealsult)
 
 
 ## Support and feedback
 
 For support or feedback, email me at asultan.london@gmail.com and I will reach out to you within 2 business days.
+- [@therealsult](https://www.github.com/therealsult)
+

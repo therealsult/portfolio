@@ -19,5 +19,5 @@ I'm a passionate interactive media design student with a flair for creativity an
 
 For support or feedback get in touch with me and I will reach out to you within 2 business days.
 - [@therealsult](https://www.github.com/therealsult)
-- [email me here](mailto:asultan.london@gmail.com)
+- [Email](mailto:asultan.london@gmail.com)
 

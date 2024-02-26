@@ -12,7 +12,7 @@ I'm a passionate interactive media design student with a flair for creativity an
 Javascript, HTML, CSS, PHP, SQL, Adobe Suite, Blender and Cinema 4D.
 
 
-![logo-1](https://github.com/therealsult/portfolio/assets/113542978/9410ffe4-03a1-4e50-ab43-26340d7d2f07)
+![logogogogo](https://github.com/therealsult/portfolio/assets/113542978/0b385b78-43a3-403a-9a64-3b9f1434f503)
 
 
 ## Authors

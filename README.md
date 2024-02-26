@@ -9,9 +9,10 @@ Whether you're a fellow designer, a prospective client, or simply an enthusiast 
 ## 🚀 About Me
 I'm a passionate interactive media design student with a flair for creativity and a keen eye for detail. As an aspiring designer, I thrive on bringing ideas to life through innovative digital experiences.
 ## 🛠 Skills
-Javascript, HTML, CSS, PHP, SQL, Adobe Suite, Blender and Cinema 4D.
-
-
+- Code
+CSS, HTML, JavaScript, PHP, Pyhton
+- Design
+  Xd, Figma, Illustrator, InDesign, Photoshop
 
 
 

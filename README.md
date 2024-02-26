@@ -17,6 +17,5 @@ Javascript, HTML, CSS, PHP, SQL, Adobe Suite, Blender and Cinema 4D.
 
 ## Support and feedback
 
-For support or feedback, email me at asultan.london@gmail.com and I will reach out to you within 2 business days.
-- [@therealsult](https://www.github.com/therealsult)
+For support or feedback, - [@therealsult](https://www.github.com/therealsult) or -[email me at](mailto:asultan.london@gmail.com) and I will reach out to you within 2 business days.
 

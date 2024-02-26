@@ -1,5 +1,4 @@
 <?php
-
 $name = $_POST["name"];
 $message = $_POST["message"];
 $email = $_POST["email"];
@@ -38,3 +37,5 @@ if (!mysqli_stmt_execute($stmt)) {
 }
 
 echo "Message sent. I will get in touch with you within 2 business days.";
+
+?>

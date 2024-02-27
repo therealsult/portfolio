@@ -1,31 +1,23 @@
-# Abdullah Sultan Portfolio
+# Hi, I'm Abdullah Sultan! 👋
 
-Welcome to my portfolio site
 
-## Installation
+Welcome to my portfolio. My portfolio showcases a diverse range of projects, from interactive websites to mobile applications and multimedia presentations. With each piece, I strive to push boundaries, challenge conventions, and create memorable interactions that leave a lasting impression.
 
-TODO: Describe the installation process
+Whether you're a fellow designer, a prospective client, or simply an enthusiast of interactive media, I invite you to explore my work and experience the fusion of artistry and technology firsthand.
 
-## Usage
 
-TODO: Write usage instructions
+## 🚀 About Me
+I'm a passionate interactive media design student with a flair for creativity and a keen eye for detail. As an aspiring designer, I thrive on bringing ideas to life through innovative digital experiences.
+## 🛠 Skills
+- CSS, HTML, JavaScript, PHP, and Pyhton.
+- Xd, Figma, Illustrator, InDesign, and Photoshop.
+- Cinema 4D, Blender, and Unity.
+- CMS, Commerce, CRM, and SEO.
 
-## Contributing
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+## Support and feedback
 
-## History
+For support or feedback get in touch with me and I will reach out to you within 2 business days.
+- [@therealsult](https://www.github.com/therealsult)
+- asultan.london@gmail.com
 
-TODO: Write history
-
-## Credits
-
-Abdullah Sultan
-
-## License
-
-MIT

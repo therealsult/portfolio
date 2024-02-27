@@ -65,6 +65,75 @@
 
 
 
+
+<section class="contact-form">
+  <h1 class="hidden">Contact</h1>
+
+  <h2>Contact Me</h2>
+
+  <form action="process-form.php" method="post">
+
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email">
+    
+    <label for="message">Message</label>
+    <textarea id="message" name="message"></textarea>
+
+    <label for="priority">Priority</label>
+    <select id="priority" name="priority">
+        <option value="1">Low</option>
+        <option value="2" selected>Medium</option>
+        <option value="3">High</option>
+    </select>
+
+    <fieldset>
+        <legend>Select which best applies</legend>
+
+        <label>
+            <input type="radio" name="type" value="1" checked>
+            New startup
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="type" value="2">
+            Rebranding
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="type" value="3" checked>
+            Graphic design
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="type" value="4">
+            Motion design
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="type" value="5" checked>
+            Marketing solutions
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="type" value="6">
+            Client support
+        </label>
+    </fieldset>
+    <br>
+    <label>
+        <input type="checkbox" name="terms">
+        I agree to the terms and conditions
+    </label>
+
+    <br>
+
+    <button>Send</button>
+
+  </form>
+</section>
           
 <!-- ===== footer sec ===== -->
 
@@ -99,7 +168,7 @@
   </div>
 
     <div class="footer-bottom">
-      <p>Copyright &copy <span id="year"></span> <a href="index.html">Abdulla Sultan</a> </p>
+      <p>Copyright &copy <span id="year"></span> <a href="index.html">Abdullah Sultan</a> </p>
     </div>
 
 </footer>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Abdullah Sultan</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,126 +10,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet"/>
-   </head>
-
-
+</head>
 <body>
+
+<?php
+// Enable error reporting
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Include the database connection file
+require_once('includes/connect.php');
+
+// Run queries to pull back content
+$query = 'SELECT id, title, project_description, published_date, project_image FROM projects';
+$stmt = $connection->prepare($query);
+$stmt->execute();
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
 
 <!-- ==== header ==== -->
 
 <div class="hero-bg"></div>
 
 <header class="site-header">
-
-  <a href="index.html"><img src="images/logo-1.svg" alt="Abdullah Sultan"></a>
-      <nav class="site-navigation">
+    <a href="index.php"><img src="images/logo-1.svg" alt="Abdullah Sultan"></a>
+    <nav class="site-navigation">
         <ul class="nav">
-          <li><a href="about.html">About</a></li> 
-          <li><a href="projects.html">Projects</a></li> 
+            <li><a href="about.php">About</a></li> 
+            <li><a href="projects.php">Projects</a></li>
         </ul>
-      </nav>
-      
+    </nav>
 </header>
 
+
+        <div class="bg-1">
       <section class="container" id="hero">
-        
         <h1 class="hidden">Hero Section</h1>
         <h2 id="hero-h2">Creativity Begins Here</h2>
-        <h3 id="hero-h3">Get started today!</h3>
+        <h3 id="hero-h3">Get started today!</h3> 
       </section>
+       </div>
 
       <section class="container-2" id="banner-1">
         <h1 class="hidden">Banner 1</h1>
         <h2>Problems Solved</h2>
-        <h3>Hand picked things I've made or worked on. Have a look!</h3>
+        <h3>Some projects that I've made or worked on. Have a look!</h3>
       </section>
 
-<!-- 
-      <section class="container-2" id="proj-sec">
-        <h1 class="hidden">Projects Section</h1>
-
-        <div class="projects">
-          <div class="column">
-          <img src="images/earbuds.png" alt="Earbuds Website">
-          </div>
-          <div class="column">
-            <a href="project.html"><img src="images/quatro-1.png" alt="Quatro Rebrand"></a>
-          </div>
-          <div class="column">
-            <img src="images/case-1.png" alt="Earbuds Build">
-          </div>
-        </div>
-        
-      </section> -->
-
-
-      
       <section class="projects-con">
-        <section class="content">  
-          <div class="project-gallery">
-        
-            <div class="project">
-              <img src="images/case-1.png" />
-              <div class="project-caption">
-                <a href="study.html">
-                  <div>
-                    <h2>Earbud Product Development</h2>
-                    <p>3D product build using Cinema4D</p>
-                  </div>
-              </div>
-              </a>
-            </div>
-            
-            <div class="project">
-              <img src="images/quatro-1.png" alt="Olympic National Park" />
-              <div class="project-caption">
-                <a href="study.html">
-                  <div>
-                    <h2>Quatro Product Rebrand</h2>
-                    <p>Brand rebirth</p>
-                </div>
-              </div>
-              </a>
-            </div>
-        
-        
-        
-        
-            <div class="project">
-              <img src="images/earbuds.png" alt="Mount St. Helens" />
-              <div class="project-caption">
-                <a href="study.html">
-                  <div>
-                    <h2>Earbuds Web Development</h2>
-                    <p>Interactive web development</p>
-                  </div>
-                </a>
-                </div>
-            </div>
-            
-            <!-- second row -->
-            <!-- <div class="project">
-              <img src="images/case-1.png" alt="Olympic National Park" />
-              <div class="project-caption">
-                <div>
-                  <h2>header </h2>
-                  <p>text...</p>
-                </div>
-                <a class="vimeo-popup" href="#"></a>
-              </div>
-            </div> -->
-        
-        
-        
-        
-          </div>
-        </section>
+    <?php
+    foreach ($results as $row) {
+        $encodedImageName = rawurlencode($row['project_image']);
 
-
-
-
-
-
+        echo '<div class="book_list"><img src="http://localhost/portfolio/images/' . $encodedImageName . '" alt="' . $row['title'] . '" style="width: auto; height: 270px;"><h2>' . $row['title'] . '</h2><h3>(' . $row['published_date'] . ')</h3><p>' . '&nbsp;<a href="http://localhost/portfolio/study.php?id=' . $row['id'] . '">Learn More</a></p></div>';
+    }
+    ?>
+</section>
 
       <section class="highlight-sec" >
 
@@ -211,6 +147,98 @@
 
     </section>
 
+<!-- 
+    <section class="container-2" id="gal">
+      <div class="gallery">
+        <img src="images/ajax.png" alt="">
+        <img src="images/3.jpg" alt="">
+        <img src="images/phone.png" alt="">
+        <img src="images/4.jpg" alt="">
+        <img src="images/sweater.png" alt="">
+        <img src="images/quatro-1.png" alt="">
+        <img src="images/earbuds.png" alt="">
+        <img src="images/mindmap-1.png" alt="">
+        <img src="images/5.jpg" alt="">
+    
+    </div>
+    </section>
+ -->
+
+    
+<!-- form -->
+<section class="container">
+  <h1 class="hidden">Contact</h1>
+  
+<div class="contact-form">
+      <h2>Contact Me</h2>
+  
+      <form action="process-form.php" method="post">
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+
+        <label for="priority">Priority</label>
+        <select id="priority" name="priority">
+            <option value="1">Low</option>
+            <option value="2" selected>Medium</option>
+            <option value="3">High</option>
+        </select>
+
+        <fieldset>
+            <legend>Select which best applies</legend>
+
+            <label>
+                <input type="radio" name="type" value="1" checked>
+                New startup
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="type" value="2">
+                Rebranding
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="type" value="3">
+                Graphic design
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="type" value="4">
+                Motion design
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="type" value="5">
+                Marketing solutions
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="type" value="6">
+                Client support
+            </label>
+        </fieldset>
+        <br>
+        <label>
+            <input type="checkbox" name="terms">
+            I agree to the terms and conditions
+        </label>
+
+        <br>
+
+        <button>Send</button>
+  
+      </form>
+
+    </div>
+    </section>
+
+
 
 <!-- ===== footer sec ===== -->
 
@@ -245,7 +273,7 @@
   </div>
 
     <div class="footer-bottom">
-      <p>Copyright &copy <span id="year"></span> <a href="index.html">Abdulla Sultan</a> </p>
+      <p>Copyright &copy <span id="year"></span> <a href="index.html">Abdullah Sultan</a> </p>
     </div>
 
 </footer>

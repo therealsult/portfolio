@@ -147,7 +147,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     </section>
 
-<!-- 
+
     <section class="container-2" id="gal">
       <div class="gallery">
         <img src="images/ajax.png" alt="">
@@ -162,7 +162,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     </div>
     </section>
- -->
+
 
     
 <!-- form -->

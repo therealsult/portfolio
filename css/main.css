@@ -122,19 +122,11 @@ a {
   padding: 2em 8em;
   display: flex;
   justify-content: space-between;
-  background-color: #000;
+  filter: drop-shadow(3px 3px 5px #000000);
  }
 
- .site-header-home { 
-  padding: 2em 8em;
-  display: flex;
-  justify-content: space-between;
- }
 
-.site-identity h1 {
-  font-size: 1.5em;
-   display: inline-block;
-}
+
 
 
 header img {
@@ -390,7 +382,6 @@ div{
 .testimonial {
   flex: 1;
   background-color: #000000;
-  margin: 20px;
   padding: 30px;
   color: #fff;
   text-align: left;
@@ -646,14 +637,10 @@ div{
   }
 
   .middle {
-    max-width: 75%;
+    max-width: 100%;
   }
 
-  .right {
-    max-width: 25%;
-  }
-  
-  .left {
+  .right, .left {
     display: none;
   }
 
@@ -886,7 +873,7 @@ div{
     text-align: left;
     padding: 0 45px 0 45px  }
 
-  #banner-1 h3, h3 {
+  #banner-1 h3 {
     text-align: center;
   }
 
@@ -903,11 +890,9 @@ div{
 .gallery{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1vh;
   margin-inline: auto;
   max-width: 100vw;
-  background: rgb(0, 0, 0);
-  padding: 1vh;
+  background: rgb(255, 255, 255);
 }
 
 
@@ -927,6 +912,7 @@ div{
   scale: 0.8;
   opacity: 0.5;
   filter: grayscale(70%);
+  
 }
 
 
@@ -1066,11 +1052,14 @@ div{
     transform 200ms linear;
 }
 
-.card:hover .card-background{
+.card:hover 
+.card-background{
   transform: scale(1.1) translateZ(0);
 }
 
-.card-grid:hover > .card:not(:hover) .card-background{
+.card-grid:hover > 
+.card:not(:hover) 
+.card-background{
   filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
 }
 
@@ -1114,23 +1103,22 @@ div{
 
 
 .branding-hero {
-  background-image: url(https://cdn.leonardo.ai/users/bc0a8107-0e11-4e8b-becb-cd1904daa6d3/generations/2f2764f9-9964-4570-9d0d-6c23a9f014e4/Default_different_brand_logos_on_white_background_to_represent_3.jpg); background-repeat: no-repeat; max-width: 100%; height: 100%; background-size: cover;
-}
+  background-image: url(images/branding.jpg)}
 
 .design-hero {
-background-image: url(https://cdn.leonardo.ai/users/bc0a8107-0e11-4e8b-becb-cd1904daa6d3/generations/f822a117-35cc-4dd1-a4d1-d2c1eef242eb/Default_media_designer_0.jpg); background-repeat: no-repeat; max-width: 100%; height: 100%; background-size: cover;
+  background-image: url(images/design.jpg);
 }
 
 .motion-hero {
-  background-image: url(https://cdn.leonardo.ai/users/bc0a8107-0e11-4e8b-becb-cd1904daa6d3/generations/9a66eb66-8b87-4966-a60e-6f041cab2162/Default_A_shimmering_serpentlike_celestial_being_adorned_with_0.jpg); background-repeat: no-repeat; max-width: 100%; height: 100%; background-size: cover;
-  }
+  background-image: url(images/motion.jpg);
+}
 
   .dev-hero {
-    background-image: url(https://cdn.leonardo.ai/users/bc0a8107-0e11-4e8b-becb-cd1904daa6d3/generations/60d9de23-bdd9-4b03-a9ed-31f3873331e8/Default_website_code_0.jpg); background-repeat: no-repeat; max-width: 100%; height: 100%; background-size: cover;
-    }
+    background-image: url(images/dev.jpg);
+  }
 
     .projects-hero {
-      background-image: url(https://cdn.leonardo.ai/users/bc0a8107-0e11-4e8b-becb-cd1904daa6d3/generations/78c88990-7c32-414f-971b-379d4e4cc384/Default_building_blocks_piling_up_0.jpg); background-repeat: no-repeat; max-width: 100%; height: 100%; background-size: cover;
+      background-image: url(images/projects.jpg);
       padding-bottom: 4rem;
       }
 

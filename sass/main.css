@@ -22,3 +22,15 @@ p {
   font-weight: 300;
   font-size: 16px;
 }
+
+
+:root{
+  --text-light: rgb(255, 255, 255);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}

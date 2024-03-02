@@ -64,8 +64,8 @@ $step_6 = $rowSteps["step_6"];
   <a href="index.html"><img src="images/logo-1.svg" alt="Abdullah Sultan"></a>
   <nav class="site-navigation">
           <ul class="nav">
-            <li><a href="about.html">About</a></li> 
-            <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+        <li><a href="projects.php">Projects</a></li>
           </ul>
         </nav>
         
@@ -174,21 +174,20 @@ $step_6 = $rowSteps["step_6"];
   
   <div class="row-footer wrapper-footer">
     
-    <div class="column-footer middle">
+  <div class="column-footer middle">
       <div>
         <i class="fa fa-map-marker"></i>
-        <p><span> 123 Queen Street</span> London, Ontario</p>
+        <p>London, Ontario</p>
       </div>
       <div>
         <i class="fa fa-phone"></i>
-        <p> (+1) 226 456 7890</p>
+        <p>(226) 456 0120</p>
       </div>
       <div>
         <i class="fa fa-envelope"></i>
-        <p><a href="#"> a_sultanh@lo.com</a></p>
+        <p><a href="#">asultan.london@gmail.com</a></p>
       </div>
     </div>
-
 
     <div class="column-footer right">
       <a href="index.html"><img style="height: 150px; width: 150px;" src="images/logo-1.svg" alt="Abdullah Sultan"></a>

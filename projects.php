@@ -21,7 +21,26 @@ $query = 'SELECT id, title, project_description, published_date, project_image F
 $stmt = $connection->prepare($query);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+$query2 = 'SELECT id, title, project_description, published_date, project_image FROM design';
+$stmt = $connection->prepare($query2);
+$stmt->execute();
+$results2 = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$query3 = 'SELECT id, title, project_description, published_date, project_image FROM development';
+$stmt = $connection->prepare($query3);
+$stmt->execute();
+$results3 = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+$query4 = 'SELECT id, title, project_description, published_date, project_image FROM motion';
+$stmt = $connection->prepare($query4);
+$stmt->execute();
+$results4 = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
+
 
 <body>
 
@@ -34,38 +53,157 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <a href="index.html"><img src="images/logo-1.svg" alt="Abdullah Sultan"></a>
   <nav class="site-navigation">
         <ul class="nav">
-          <li><a href="about.html">About</a></li> 
-          <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.php">Projects</a></li>
         </ul>
       </nav>
       
 </header>
 
-<div class="bg-1">
+<div class="projects-hero">
       <section class="container" id="hero">
         
         <h1 class="hidden">Hero Section</h1>
         <h2 id="hero-h2">See More</h2>
       </section>
        </div>
-      <section class="container-2" id="banner-1">
-        <h1 class="hidden">Banner 1</h1>
-        <h2>Projects Gallery</h2>
+
+       <section class="container-2" id="projects-title">
+        <br>
+        <br>
+        <br>
+       <h2>Branding</h2>
        </section>
 
-
-
-
        <section class="projects-con">
-    <?php
+       <?php
     foreach ($results as $row) {
         $encodedImageName = rawurlencode($row['project_image']);
 
-        echo '<div class="book_list"><img src="http://localhost/portfolio/images/' . $encodedImageName . '" alt="' . $row['title'] . '" style="width: auto; height: 260px;"><h2>' . $row['title'] . '</h2><p>' . '&nbsp;<a href="http://localhost/portfolio/study.php?id=' . $row['id'] . '">Learn More</a></p></div>';
+        echo '<div class="book_list"><img src="http://localhost/portfolio/images/' . $encodedImageName . '" alt="' . $row['title'] . '" style="width: auto; height: 270px;"><h2>' . $row['title'] . '</h2><h3>(' . $row['published_date'] . ')</h3><p>' . '&nbsp;<a href="http://localhost/portfolio/study.php?id=' . $row['id'] . '">Learn More</a></p></div>';
+    }
+    ?>
+</section>
+
+
+<section class="container-2" id="projects-title">
+       <h2>Design</h2>
+       </section>
+
+<section class="projects-con">
+       <?php
+    foreach ($results2 as $row) {
+        $encodedImageName = rawurlencode($row['project_image']);
+
+        echo '<div class="book_list"><img src="http://localhost/portfolio/images/' . $encodedImageName . '" alt="' . $row['title'] . '" style="width: auto; height: 270px;"><h2>' . $row['title'] . '</h2><h3>(' . $row['published_date'] . ')</h3><p>' . '&nbsp;<a href="http://localhost/portfolio/study.php?id=' . $row['id'] . '">Learn More</a></p></div>';
+    }
+    ?>
+</section>
+
+
+<section class="container-2" id="projects-title">
+       <h2>Development</h2>
+       </section>
+
+<section class="projects-con">
+       <?php
+    foreach ($results3 as $row) {
+        $encodedImageName = rawurlencode($row['project_image']);
+
+        echo '<div class="book_list"><img src="http://localhost/portfolio/images/' . $encodedImageName . '" alt="' . $row['title'] . '" style="width: auto; height: 270px;"><h2>' . $row['title'] . '</h2><h3>(' . $row['published_date'] . ')</h3><p>' . '&nbsp;<a href="http://localhost/portfolio/study.php?id=' . $row['id'] . '">Learn More</a></p></div>';
+    }
+    ?>
+</section>
+
+
+<section class="container-2" id="projects-title">
+       <h2>Motion Graphics</h2>
+       </section>
+
+<section class="projects-con">
+       <?php
+    foreach ($results4 as $row) {
+        $encodedImageName = rawurlencode($row['project_image']);
+
+        echo '<div class="book_list"><img src="http://localhost/portfolio/images/' . $encodedImageName . '" alt="' . $row['title'] . '" style="width: auto; height: 270px;"><h2>' . $row['title'] . '</h2><h3>(' . $row['published_date'] . ')</h3><p>' . '&nbsp;<a href="http://localhost/portfolio/study.php?id=' . $row['id'] . '">Learn More</a></p></div>';
     }
     ?>
 </section>
  
+
+<!-- form -->
+<section class="container">
+  <h1 class="hidden">Contact</h1>
+
+  <div class="contact-form">
+    <h2>Contact Me</h2>
+
+    <form action="process-form.php" method="post">
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message"></textarea>
+
+      <label for="priority">Priority</label>
+      <select id="priority" name="priority">
+        <option value="1">Low</option>
+        <option value="2" selected>Medium</option>
+        <option value="3">High</option>
+      </select>
+
+      <fieldset>
+        <legend>Select which best applies</legend>
+
+        <label>
+          <input type="radio" name="type" value="1" checked>
+          New startup
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="type" value="2">
+          Rebranding
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="type" value="3">
+          Graphic design
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="type" value="4">
+          Motion design
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="type" value="5">
+          Marketing solutions
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="type" value="6">
+          Client support
+        </label>
+      </fieldset>
+      <br>
+      <label>
+        <input type="checkbox" name="terms">
+        I agree to the terms and conditions
+      </label>
+
+      <br>
+
+      <button>Send</button>
+
+    </form>
+
+  </div>
+</section>
+
 
 
 <!-- ===== footer sec ===== -->
@@ -75,43 +213,50 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <div class="map">
     <div id="map"></div>
   </div>
-  
+
   <div class="row-footer wrapper-footer">
-    
+
     <div class="column-footer middle">
       <div>
         <i class="fa fa-map-marker"></i>
-        <p><span> 123 Queen Street</span> London, Ontario</p>
+        <p>London, Ontario</p>
       </div>
       <div>
         <i class="fa fa-phone"></i>
-        <p> (+1) 226 456 7890</p>
+        <p>(226) 456 0120</p>
       </div>
       <div>
         <i class="fa fa-envelope"></i>
-        <p><a href="#"> a_sultanh@lo.com</a></p>
+        <p><a href="#">asultan.london@gmail.com</a></p>
       </div>
     </div>
 
 
     <div class="column-footer right">
-      <a href="index.html"><img style="height: 150px; width: 150px;" src="images/logo-1.svg" alt="Abdullah Sultan"></a>
+      <a href="index.html"><img style="height: 150px; width: 150px;" src="images/logo-1.svg"
+          alt="Abdullah Sultan"></a>
     </div>
 
   </div>
 
-    <div class="footer-bottom">
-      <p>Copyright &copy <span id="year"></span> <a href="index.html">Abdullah Sultan</a> </p>
-    </div>
+  <div class="footer-bottom">
+    <p>Copyright &copy <span id="year"></span> <a href="index.html">Abdullah Sultan</a> </p>
+  </div>
 
 </footer>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/split-type"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
+  integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/split-type"></script>
 
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOVRTzClCZIK37o28OfnZ_7ukciHE4eJI&callback=initMap" async defer></script>
-    <script src="js/main.js"></script>
-  </body>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOVRTzClCZIK37o28OfnZ_7ukciHE4eJI&callback=initMap"
+  async defer></script>
+<script src="js/main.js"></script>
+</body>
+
 </html>

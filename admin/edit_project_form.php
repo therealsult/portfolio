@@ -21,13 +21,24 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
  
 <form action="edit_project.php" method="POST">
-
+<input name="pk" type="hidden" value="<?php echo $row['id']; ?>">
     <label for="title">project title: </label>
-    <input name="title" type="text" required><br><br>
+    <input name="title" type="text" value="<?php echo $row['title']; ?>" required>
+    <br><br>
+    
+    <label for="date">project description: </label>
+    <textarea name="date" required><?php echo $row['published_date']; ?></textarea>
+    <br><br>
+
+    <label for="description">project description: </label>
+    <textarea name="description" required><?php echo $row['project_description']; ?></textarea>
+    <br><br>
+    
+    
     <label for="thumb">project thumbnail: </label>
-    <input name="thumb" type="text" required><br><br>
-    <label for="desc">project description: </label>
-    <textarea name="desc" required></textarea><br><br>
+    <input name="thumb" type="text" required value="<?php echo $row['project_image']; ?>">
+    <br><br>
+    
     <input name="submit" type="submit" value="Edit">
 </form>
 <?php

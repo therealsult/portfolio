@@ -1,0 +1,236 @@
+:root {
+    --primary: rgb(22, 201, 255);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+    
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  
+   }
+
+   body {
+    font-family: 'Lexend', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+  }
+
+  html, body {
+	height:100%;
+	width: 100vw;
+  max-width: 1200;
+}
+
+.header h2 {
+    padding: 3rem 0 1rem 0;
+    font-size: 46px;
+  }
+.header h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.header p {
+    padding-bottom: 5rem;
+}
+
+
+.dash-con {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: black;
+    color: rgba(255,255,255,0.85);
+  }
+  
+  main {
+    width: 600px;
+    height: 300px;
+    font: 0.7rem 'lexend',sans-serif;
+  
+    & header {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      margin-bottom: 2.25rem;
+      color: white;
+  
+      & span {
+        color: var(--primary);
+      }
+    }
+  
+    & section {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+  
+  .indexes, .tabs { list-style-type: none; }
+  
+  .indexes {
+    font-size: 1rem;
+  
+    & li {
+      padding: 1rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+  }
+  
+  .tabs { position: relative; }
+  
+  .tab {
+    position: absolute;
+    display: flex;
+    width: 530px;
+    height: 225px;
+    opacity: 0; 
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  .tab-content {
+    position: relative;
+    z-index: 5;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(-5rem);
+  
+    & h3 {
+      font-family: helvetica;
+      font-weight: 900;
+      font-size: 1rem;
+      border-bottom: 1.5px solid white;
+      padding-bottom: 1rem;
+    }
+  
+    & p {
+      font-family: helvetica;
+      font-weight: 100;
+      line-height: 2;
+      color: rgba(255,255,255,0.7);
+    }
+  
+    & a {
+      width: fit-content;
+      background-color: transparent;
+      color: white;
+      border: 1px solid white;
+      font-size: 0.7rem;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+    }
+  }
+  
+  @keyframes content {
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  .active .tab          { opacity: 1; z-index: 5; }
+  .active .tab-content  { animation: content 0.9s ease-out 0.4s forwards; }
+
+
+
+label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 50px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    border: solid rgb(255, 255, 255) 2px;
+    background-color: #000000;
+    color: #ffffff;
+    filter: drop-shadow(0px 10px 0px #ffffff);
+    padding: 10px 25px 10px 30px;
+    text-decoration: none;
+    margin: 40px 0px 40px 0px;
+    font-weight: light;
+    transition: ease-in-out .1s;
+}
+input[type="submit"]:hover {
+    filter: drop-shadow(0px 0px 0px #ffffff);
+    background-color: #ffffff;
+    color: #000;
+    transition: ease-in-out .1s;
+}
+
+a {
+  width: fit-content;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  font-size: 0.7rem;
+  padding: 0.75rem 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.project-list {
+    margin-bottom: 20px;
+    padding-bottom:30px;
+}
+.project-title {
+    margin-bottom: 20px;
+}
+
+
+
+
+ul li {
+    margin: 0 1.5rem 0 0;
+  }
+  
+  .social {
+    margin-top: 60px;
+    
+  }
+  
+  .social li {
+    display: inline-block;
+  }
+  
+  footer {
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+
+  .grid a {
+    font-size: 50px;
+    border: none;
+  }
+
+  .grid a :hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transition: 200ms;
+    background-color: black;
+  }
+
+
+

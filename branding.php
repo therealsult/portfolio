@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet"/>
+    <link href="css/main.css?v=<?php echo time(); ?>" rel="stylesheet"/>
    </head>
 
 
@@ -41,7 +41,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
       
 </header>
 
-<div class="branding-hero">
+<div class="branding-hero" style="background-image: url(images/branding.jpg); background-size:cover; background-repeat:no-repeat; background-position: center center; ">
       <section class="container" id="hero">
         <h1 class="hidden">Hero Section</h1>
         <h2 id="hero-h2">Branding</h2>

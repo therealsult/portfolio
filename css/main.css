@@ -97,12 +97,30 @@ body {
   margin: 0 auto;
   background-color: #ffffff;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 50px;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  padding: 0 20px 0 20px;
 }
- 
 
+.projects-con .book_list{
+  width: calc(30% - 20px);
+  margin-bottom: 20px; 
+  box-sizing: border-box; 
+}
+
+
+@media screen and (max-width:1100px){
+  .projects-con {
+    display: block;
+    padding: 0 5px 0 25px;
+  }
+  .projects-con .book_list{
+    width: calc(100% - 20px);
+    margin-bottom: 20px; 
+    box-sizing: border-box; 
+  }
+
+}
 
 
 
@@ -113,40 +131,30 @@ body {
 
 /* ===== highlights sec ===== */
 
-.highlight-sec *,
-.highlight-sec *:before,
-.highlight-sec *:after{
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  box-sizing:border-box;
-}
+ 
 
 div{
   font-family: 'lexend',serif;
 }
 
 .highlight-sec{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width:100%;
-  margin:0 auto;
-  padding: 0 150px 0 150px;
-  overflow:hidden;
-  background-color: #000;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+
 }
 
-.highlight-sec .highlight{
-  display:block;
-  width:100%;
-  padding:0 0.5em 0.5em 0;
+.highlight{
+  list-style: none;
+  position: relative;
 }
-
 .highlight-sec .highlight .highlight-box{
   background-color:#000000;
   color:#f0f0f0;
   text-align:left;
-  padding:6em 2em;
+  padding:4em;
 }
 
 .highlight-box h2 {
@@ -160,26 +168,6 @@ div{
   line-height: 20px;
   font-weight: 300;
 }
-
-
-
-@media screen and (max-width:760px){
-  .projects-con {
-    display: block;
-  }
-
-  .highlight-sec {
-    display: block;
-  }
-
-  .highlight-sec {
-    padding: 0;
-  }
-
-}
-
-
-
 
 
 
@@ -262,7 +250,7 @@ header img {
   display: grid;
   justify-content: center;
   text-align: center;
-  padding: 4rem 0 0 0;
+  padding: 5em 0 5em 0;
 }
 
 #banner-1 h3 {
@@ -271,7 +259,6 @@ header img {
 }
 
 #banner-1 h2 {
-  margin-bottom: 1em;
   font-size: 36px;
   font-weight: 500;
 }
@@ -341,11 +328,10 @@ header img {
   padding: 25px 0px 50px 0px;
   text-align: center;
   width: 100%;
-  margin: 60px 20px 20px 20px;
 }
 
 .book_list img {
-  max-width: 100%;
+  max-width: auto;
   height: auto;
   margin-bottom: 15px;
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.546);
@@ -808,7 +794,6 @@ header img {
   margin-bottom: 1em;
   font-size: 36px;  
   font-weight: 500;
-  margin-bottom: 60px;
 }
 
 #about-con h3 {
@@ -850,7 +835,7 @@ header img {
 
 .vd {
   padding: 10px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 
@@ -1108,13 +1093,14 @@ header img {
 
 
 @media(min-width: 480px){
-  .card-grid{
+  .card-grid, .highlight-sec{
     grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media(min-width: 760px){
-  .card-grid{
+  .card-grid, .highlight-sec{
     grid-template-columns: repeat(4, 1fr); 
   }
 }
+

@@ -1,3 +1,5 @@
+<!-- localhost -->
+
 <?php
 $dsn = "mysql:host=localhost;dbname=prvohr71_portfolio_db;charset=utf8mb4";
 try {

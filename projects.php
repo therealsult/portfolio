@@ -95,7 +95,7 @@ $results4 = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($results2 as $row) {
         $encodedImageName = rawurlencode($row['project_image']);
 
-        echo '<div class="book_list"><img src="http://localhost/portfolio/images/' . $encodedImageName . '" alt="' . $row['title'] . '" style="width: auto; height: 270px;"><h2>' . $row['title'] . '</h2><h3>(' . $row['published_date'] . ')</h3><p>' . '&nbsp;<a href="http://localhost/portfolio/study.php?id=' . $row['id'] . '">Learn More</a></p></div>';
+        echo '<div class="book_list"><img src="http://localhost/portfolio/images/' . $encodedImageName . '" alt="' . $row['title'] . '" style="width: auto; height: 270px;"><h2>' . $row['title'] . '</h2><h3>(' . $row['published_date'] . ')</h3><p>' . '&nbsp;<a href="http://localhost/portfolio/design_page.php?id=' . $row['id'] . '">Learn More</a></p></div>';
     }
     ?>
 </section>
@@ -110,7 +110,7 @@ $results4 = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($results3 as $row) {
         $encodedImageName = rawurlencode($row['project_image']);
 
-        echo '<div class="book_list"><img src="http://localhost/portfolio/images/' . $encodedImageName . '" alt="' . $row['title'] . '" style="width: auto; height: 270px;"><h2>' . $row['title'] . '</h2><h3>(' . $row['published_date'] . ')</h3><p>' . '&nbsp;<a href="http://localhost/portfolio/study.php?id=' . $row['id'] . '">Learn More</a></p></div>';
+        echo '<div class="book_list"><img src="http://localhost/portfolio/images/' . $encodedImageName . '" alt="' . $row['title'] . '" style="width: auto; height: 270px;"><h2>' . $row['title'] . '</h2><h3>(' . $row['published_date'] . ')</h3><p>' . '&nbsp;<a href="http://localhost/portfolio/development_page.php?id=' . $row['id'] . '">Learn More</a></p></div>';
     }
     ?>
 </section>
@@ -125,12 +125,13 @@ $results4 = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($results4 as $row) {
         $encodedImageName = rawurlencode($row['project_image']);
 
-        echo '<div class="book_list"><img src="http://localhost/portfolio/images/' . $encodedImageName . '" alt="' . $row['title'] . '" style="width: auto; height: 270px;"><h2>' . $row['title'] . '</h2><h3>(' . $row['published_date'] . ')</h3><p>' . '&nbsp;<a href="http://localhost/portfolio/study.php?id=' . $row['id'] . '">Learn More</a></p></div>';
+        echo '<div class="book_list"><img src="http://localhost/portfolio/images/' . $encodedImageName . '" alt="' . $row['title'] . '" style="width: auto; height: 270px;"><h2>' . $row['title'] . '</h2><h3>(' . $row['published_date'] . ')</h3><p>' . '&nbsp;<a href="http://localhost/portfolio/motion_page.php?id=' . $row['id'] . '">Learn More</a></p></div>';
     }
     ?>
 </section>
  
 
+<
 <!-- form -->
 <section class="container">
   <h1 class="hidden">Contact</h1>
@@ -138,7 +139,7 @@ $results4 = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <div class="contact-form">
     <h2>Contact Me</h2>
 
-    <form action="process-form.php" method="post">
+    <form action="https://formsubmit.co/asultan.london@gmail.com" method="POST">
 
       <label for="name">Name</label>
       <input type="text" id="name" name="name">
@@ -189,20 +190,15 @@ $results4 = $stmt->fetchAll(PDO::FETCH_ASSOC);
           Client support
         </label>
       </fieldset>
-      <br>
-      <label>
-        <input type="checkbox" name="terms">
-        I agree to the terms and conditions
-      </label>
 
-      <br>
-
-      <button>Send</button>
+      <button type="submit">Send</button>
 
     </form>
 
   </div>
 </section>
+
+
 
 
 

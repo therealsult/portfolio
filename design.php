@@ -60,7 +60,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($results as $row) {
         $encodedImageName = rawurlencode($row['project_image']);
 
-        echo '<div class="book_list"><img src="http://localhost/portfolio/images/' . $encodedImageName . '" alt="' . $row['title'] . '" style="width: auto; height: 270px;"><h2>' . $row['title'] . '</h2><h3>(' . $row['published_date'] . ')</h3><p>' . '&nbsp;<a href="http://localhost/portfolio/study.php?id=' . $row['id'] . '">Learn More</a></p></div>';
+        echo '<div class="book_list"><img src="http://localhost/portfolio/images/' . $encodedImageName . '" alt="' . $row['title'] . '" style="width: auto; height: 270px;"><h2>' . $row['title'] . '</h2><h3>(' . $row['published_date'] . ')</h3><p>' . '&nbsp;<a href="http://localhost/portfolio/design_page.php?id=' . $row['id'] . '">Learn More</a></p></div>';
     }
     ?>
 </section>
